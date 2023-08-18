@@ -1,13 +1,11 @@
 import { GalleryItem } from "components/GalleryItem/galleryItem";
 import { Component } from "react";
-
 export class Gallery extends Component {
     render(){
+        const { images } = this.props;
         return(
             <div>
-                <ul class="gallery">
-                <GalleryItem/>
-                </ul>
+                    <GalleryItem images={images}/>
             </div>
         )
     }
