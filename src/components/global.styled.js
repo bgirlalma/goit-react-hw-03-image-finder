@@ -16,4 +16,26 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+
+  button{
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 `;
