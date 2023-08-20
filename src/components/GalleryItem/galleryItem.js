@@ -1,4 +1,4 @@
-import { Modal } from '../Modal/modal';
+import { CustomModal} from '../Modal/modal';
 import {ListItem, Item, Images} from './galleryItem.styled'
 import { Component } from 'react';
 
@@ -52,7 +52,7 @@ export class GalleryItem extends Component {
         ))}
   
         {modalOpen && (
-          <Modal image={selectedImage} closeModal={this.closeModal}/>
+          <CustomModal image={selectedImage} closeModal={this.closeModal}/>
         )}
       </ListItem>
     );

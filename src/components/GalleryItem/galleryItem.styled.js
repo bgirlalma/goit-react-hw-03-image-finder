@@ -13,6 +13,6 @@ display: flex;
 
 export const Images = styled.img`
 width: 100%;
-height: 200px;
-background-size: contain;
+height: 300px;
+object-fit: cover;
 `;

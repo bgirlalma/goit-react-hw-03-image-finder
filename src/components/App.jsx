@@ -8,7 +8,7 @@ import { FetchItem } from './Api'
 export class App extends Component {
   state = {
     query: '',
-    image: [],
+    image: [], 
     page: 1,
     loader: false,
     showLoadMoreButton: false,
@@ -28,7 +28,7 @@ export class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.query !== this.state.query) {
+    if (prevState.query !== this.state.query || prevState.page !== this.state.page) {
       try {
         localStorage.setItem('save-search', JSON.stringify(this.state.query))
       } catch (error) {
@@ -39,7 +39,7 @@ export class App extends Component {
 
   fetchImagesByQuery = async (newQuery, page = 1) => {
     try {
-      const queryImage = await FetchItem(newQuery, page); // Pass the page parameter
+      const queryImage = await FetchItem(newQuery, page);
       return queryImage;
     } catch (error) {
       console.log('Error fetching images:', error)
@@ -77,7 +77,6 @@ export class App extends Component {
 
   render() {
     const { image, loader, showLoadMoreButton } = this.state;
-    console.log('Rendering App component with image:', image);
     return (
       <div>
         <Searchbar changeQuery={this.changeQuery} />

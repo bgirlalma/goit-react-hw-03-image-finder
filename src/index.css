@@ -17,6 +17,7 @@ li{
     background-size: contain;
     background-color: blue;
     font-size: 18px;
+    border-style: outset;
 
     position: relative;
     position: absolute;
