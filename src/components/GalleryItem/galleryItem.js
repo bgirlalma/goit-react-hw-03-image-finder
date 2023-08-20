@@ -20,14 +20,12 @@ export class GalleryItem extends Component {
     
        // Обработчик открытия модального окна
        openModal = (images) => {
-        console.log('Opening modal with image:', images);
         this.setSelectedImage(images);
         this.setModalOpen(true);
       }
 
     // Обработчик закрытия модального окна
     closeModal = () => {
-      console.log('Closing modal');
     this.setState({
       selectedImage: null,
       modalOpen: false,
@@ -35,9 +33,7 @@ export class GalleryItem extends Component {
     };
 
   render(){
-    console.log('GalleryItem received images:', this.props.images);
     const { images } = this.props;
-
     if (!images || images.length === 0) {
     return null;
   }
