@@ -16,6 +16,7 @@ li{
     max-width: 1200px;
     background-size: contain;
     background-color: blue;
+    font-size: 18px;
 
     position: relative;
     position: absolute;

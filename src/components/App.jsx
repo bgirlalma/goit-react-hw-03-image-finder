@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Searchbar } from "./SearchBar/searchBar";
 import { GlobalStyled } from "./global.styled";
 import { Gallery } from "./Gallery/gallery";
-import { LoadMore } from "./Gallery/LoadMore/loadMore";
+import { LoadMore } from "./LoadMore/loadMore";
 import { FetchItem } from './Api'
 
 export class App extends Component {
@@ -77,6 +77,7 @@ export class App extends Component {
 
   render() {
     const { image, loader, showLoadMoreButton } = this.state;
+    console.log('Rendering App component with image:', image);
     return (
       <div>
         <Searchbar changeQuery={this.changeQuery} />

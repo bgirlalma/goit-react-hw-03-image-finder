@@ -1,9 +1,9 @@
 import { Dna } from 'react-loader-spinner';
-
+import {Container, ButtonLoadMore} from './loadMore.styled';
 
 export const LoadMore = ({loadMoreImages, loaderVisible}) => {
     return (
-        <div>
+        <Container>
      {loaderVisible ? (
         <Dna
           visible={true}
@@ -14,8 +14,8 @@ export const LoadMore = ({loadMoreImages, loaderVisible}) => {
           wrapperClass="dna-wrapper"
         />
       ) : (
-        <button onClick={loadMoreImages}>Load More</button>
+        <ButtonLoadMore onClick={loadMoreImages}>Load More</ButtonLoadMore>
       )}
-        </div>
+        </Container>
     )
 }
